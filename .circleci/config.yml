@@ -16,7 +16,7 @@ jobs:
       - persist_to_workspace:
           root: ~/
           paths:
-            - /home/circleci/output.txt
+            - ~/output.txt
 
   print_output_file:
     docker:
