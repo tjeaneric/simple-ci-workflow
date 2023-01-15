@@ -16,7 +16,7 @@ jobs:
       - persist_to_workspace:
           root: ~/
           paths:
-            - output.txt
+            - ./output.txt
 
   print_output_file:
     docker:
