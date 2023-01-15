@@ -51,6 +51,16 @@ jobs:
     steps:
       - print_pipeline_id
 
+  on_failure_job:
+    docker:
+      - image: cimg/base:2020.01
+    steps:
+      - run: exit 1
+      - run:
+          name: on error
+          command: echo "Hello Error!"
+          when: on_fail
+
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
@@ -62,3 +72,4 @@ workflows:
             - save_hello_world_output
       - print_my_name
       - print_my_workflow_id
+      - on_failure_job
