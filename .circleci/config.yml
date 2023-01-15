@@ -43,8 +43,8 @@ jobs:
 workflows:
   default:
     jobs:
-      - print_hello
-      - print_world:
+      - save_hello_world_output
+      - print_output_file:
           requires:
-            - print_hello
+            - save_hello_world_output
       - print_my_name
