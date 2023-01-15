@@ -27,7 +27,7 @@ jobs:
           at: ~/
       - run:
           name: "print content from output.txt file"
-          command: cat output.txt
+          command: cat ~/output.txt
 
   print_my_name:
     docker:
